@@ -77,12 +77,12 @@ heroku create advpay-production
 heroku config:set SECRET_KEY='---mY-SEcReT---'
 heroku config:set DEBUG=false
 heroku config:set ALLOWED_HOSTS=*
-heroku config:set DATABASE_URL=postgres://advpay:advpay@localhost:5432/advpay -a 
-heroku config:set EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend -a 
-heroku config:set AWS_ACCESS_KEY_ID=my-aws-key -a 
-heroku config:set AWS_SECRET_ACCESS_KEY=my-secret -a 
-heroku config:set AWS_STORAGE_BUCKET_NAME=advpay-static -a 
-heroku config:set DISABLE_COLLECTSTATIC=1 -a 
+heroku config:set DATABASE_URL=postgres://advpay:advpay@localhost:5432/advpay
+heroku config:set EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+heroku config:set AWS_ACCESS_KEY_ID=my-aws-key
+heroku config:set AWS_SECRET_ACCESS_KEY=my-secret
+heroku config:set AWS_STORAGE_BUCKET_NAME=advpay-static
+heroku config:set DISABLE_COLLECTSTATIC=1
 
 ```
 
