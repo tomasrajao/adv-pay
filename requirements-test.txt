@@ -61,10 +61,14 @@ click-repl==0.2.0
     # via
     #   -r requirements.txt
     #   celery
+codecov==2.1.12
+    # via -r requirements-test.in
 collectfast==2.2.0
     # via -r requirements.txt
 coverage[toml]==6.0.1
-    # via pytest-cov
+    # via
+    #   codecov
+    #   pytest-cov
 decorator==5.1.0
     # via ipython
 dj-database-url==0.5.0
@@ -107,6 +111,8 @@ django-timezone-field==4.2.1
     # via
     #   -r requirements.txt
     #   django-celery-beat
+flake8==3.9.2
+    # via -r requirements-test.in
 gunicorn==20.1.0
     # via -r requirements.txt
 idna==3.2
@@ -128,6 +134,8 @@ kombu==5.1.0
     # via
     #   -r requirements.txt
     #   celery
+mccabe==0.6.1
+    # via flake8
 model-bakery==1.3.3
     # via -r requirements-test.in
 mypy-extensions==0.4.3
@@ -164,7 +172,11 @@ ptyprocess==0.7.0
 py==1.10.0
     # via pytest
 pycodestyle==2.7.0
-    # via autopep8
+    # via
+    #   autopep8
+    #   flake8
+pyflakes==2.3.1
+    # via flake8
 pygments==2.10.0
     # via ipython
 pyparsing==2.4.7
@@ -205,7 +217,9 @@ regex==2021.10.8
     #   -r requirements.txt
     #   black
 requests==2.26.0
-    # via requests-mock
+    # via
+    #   codecov
+    #   requests-mock
 requests-mock==1.9.3
     # via -r requirements-test.in
 s3transfer==0.5.0

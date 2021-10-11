@@ -1,8 +1,10 @@
 -r requirements.txt
 autopep8
+flake8
 model_bakery
 pytest
 pytest-cov
 pytest-django
+codecov
 requests-mock
 ipython==7.12
