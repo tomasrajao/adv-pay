@@ -12,4 +12,3 @@ class Profile(Base):
 
     def __str__(self):
         return "perfil do usuário {}".format(self.user)
-
