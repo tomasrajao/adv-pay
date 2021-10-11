@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,23 +18,42 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
 
-  </head>
-  <body>
+</head>
+<body>
+{% block navbar %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
 
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4">
+            <nav class="navbar navbar-light">
+                <div class="container-fluid ">
+                    <a class="navbar-brand" href="{% url 'base:home' %}">
+                        <img src="{% static 'img/adv.png' %}" alt="" width="30%" height="auto">
+                    </a>
 
-	    </div>
-		<div class="col-md-4">
-        <img src="{% static 'img/adv.png' %}" class="rounded float-start" style="width:45%;height:auto" alt="">
-	    </div>
-		<div class="col-md-4">
 
-	    </div>
-	</div>
-	</div>
-  {% block body %}
-  {% endblock body %}
-  </body>
+                    <div class="nav-item dropdown">
+                        <a style="color:#000  !important " class="nav-link dropdown-toggle" href="" id="navbarDropdown"
+                           role="button" data-toggle="dropdown"
+                           aria-expanded="false">
+                            Olá, {{ user.first_name }}
+                        </a>
+                        <div class=" dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-item">
+                                <a class="btn btn-danger" href="{% url 'logout' %}">Sair</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+</nav>
+{% endblock navbar %}
+
+{% block body %}
+{% endblock body %}
+</body>
 </html>
