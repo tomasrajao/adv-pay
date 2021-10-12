@@ -31,7 +31,7 @@
                         <img src="{% static 'img/adv.png' %}" alt="" width="30%" height="auto">
                     </a>
 
-
+                    {% if user.is_authenticated %}
                     <div class="nav-item dropdown">
                         <a style="color:#000  !important " class="nav-link dropdown-toggle" href="" id="navbarDropdown"
                            role="button" data-toggle="dropdown"
@@ -44,6 +44,14 @@
                             </div>
                         </div>
                     </div>
+                    {% else %}
+                    <div class="nav-item dropdown">
+
+                                <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+
+                    </div>
+                    {% endif %}
+
 
                 </div>
             </nav>

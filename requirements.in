@@ -18,3 +18,4 @@ raven
 redis
 Collectfast
 django-s3-folder-storage
+django-role-permissions

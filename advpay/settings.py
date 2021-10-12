@@ -63,10 +63,12 @@ INSTALLED_APPS = [
     'rangefilter',
     'dbbackup',
     'logentry_admin',
+    'rolepermissions',
 
     'utils',
-    'core.apps.CoreConfig',
+    #'core.apps.CoreConfig',
     'base',
+    'payments',
 ]
 #
 # if DEBUG:
@@ -209,6 +211,8 @@ CACHES = {
         }
     }
 }
+
+ROLEPERMISSIONS_MODULE = 'advpay.roles'
 
 if DEBUG:
     CACHES['default']['BACKEND'] = 'django.core.cache.backends.dummy.DummyCache'
