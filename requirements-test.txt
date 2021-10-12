@@ -83,6 +83,7 @@ django==3.2.8
     #   django-extensions
     #   django-filter
     #   django-logentry-admin
+    #   django-role-permissions
     #   django-storages
     #   django-timezone-field
     #   model-bakery
@@ -94,11 +95,17 @@ django-dbbackup==3.3.0
     # via -r requirements.txt
 django-debug-toolbar==3.2.2
     # via -r requirements.txt
+django-discover-runner==1.0
+    # via
+    #   -r requirements.txt
+    #   django-role-permissions
 django-extensions==3.1.3
     # via -r requirements.txt
 django-filter==21.1
     # via -r requirements.txt
 django-logentry-admin==1.1.0
+    # via -r requirements.txt
+django-role-permissions==3.1.1
     # via -r requirements.txt
 django-s3-folder-storage==0.5
     # via -r requirements.txt
@@ -231,6 +238,7 @@ six==1.16.0
     #   -r requirements.txt
     #   click-repl
     #   django-dbbackup
+    #   django-role-permissions
     #   python-dateutil
     #   requests-mock
 sqlparse==0.4.2

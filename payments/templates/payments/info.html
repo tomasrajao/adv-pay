@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+{% block body%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <table class="table">
+                <h3>{{ supplier.company }}</h3>
+                <thead>
+                <tr>
+                    <th scope="col">Supplier</th>
+                    <th scope="col">Issue Date</th>
+                    <th scope="col">Due date</th>
+                    <th scope="col">Original Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for supplier in suppliers %}
+                <tr>
+                    <td>{{ supplier.supplier }}</td>
+                    <td>{{ supplier.issue_date }}</td>
+                    <td>{{ supplier.due_date }}</td>
+                    <td>{{ supplier.original_value }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body%}
