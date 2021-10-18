@@ -5,7 +5,7 @@ Sistema de antecipação de pagamentos
 
 ### Login com admin
 
-usuário: admin
+usuário: admin <br>
 senha: admin
 
 ### Endereço da aplicação
